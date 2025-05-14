@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Main {
     public static void verifyLeapYear(int year) {
         if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
@@ -17,10 +19,15 @@ public class Main {
     }
 
     public static int calculateDeliveryDays(int distance) {
-        if (distance <= 20) return 1;
-        if (distance <= 60) return 2;
-        if (distance <= 100) return 3;
-        return -1;
+        if (distance <= 20) {
+            return 1;
+        } else if (distance <= 60) {
+            return 2;
+        } else if (distance <= 100) {
+            return 3;
+        } else {
+            return -1;
+        }
     }
 
     public static void main(String[] args) {
